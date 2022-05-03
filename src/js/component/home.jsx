@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Home = () => {
-	const [selectedColor, setSelectedColor] = useState("yellow");
+	const [selectedColor, setSelectedColor] = useState(null);
 
 	return (
 		<div className="container vh-100">
@@ -9,19 +9,19 @@ const Home = () => {
 				<div
 					onClick={() => setSelectedColor("red")}
 					className={
-						"light red" + (setSelectedColor === "red" ? "glow" : "")
+						"light red" + (selectedColor === "red" ? " glow" : "")
 					}></div>
 				<div
 					onClick={() => setSelectedColor("yellow")}
 					className={
 						"light yellow" +
-						(setSelectedColor === "yellow" ? "glow" : "")
+						(selectedColor === "yellow" ? " glow" : "")
 					}></div>
 				<div
 					onClick={() => setSelectedColor("green")}
 					className={
 						"light green" +
-						(setSelectedColor === "green" ? "glow" : "")
+						(selectedColor === "green" ? " glow" : "")
 					}></div>
 			</div>
 		</div>
